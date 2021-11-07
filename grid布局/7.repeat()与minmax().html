@@ -1,0 +1,61 @@
+<!-- 
+  repeat() 和 auto-fill可选值，指定可重复的数值
+  minmax()方法，设置最小和最大值的范围
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 400px;
+            background: skyblue;
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px; */
+            /* grid-template-columns: repeat(3, 100px); */
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-template-rows: 100px;
+        }
+        
+        .main div {
+            background: tomato;
+        }
+        
+        .main2 {
+            height: 300px;
+            background: skyblue;
+            display: grid;
+            /* grid-template-columns: 100px 1fr 100px;*/
+            grid-template-columns: 100px minmax(100px, 1fr) 100px;
+            grid-template-rows: 100px;
+        }
+        
+        .main2 div {
+            background: tomato;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <hr>
+    <div class="main2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
