@@ -1,0 +1,87 @@
+<!-- 
+  flex容器:
+    flex-direction 改变轴方向 row row-reverse column column-reverse
+    flex-wrap      换行 nowrap wrap wrap-reverse
+    flex-flow      简写 [flex-direction][flex-wrap]
+    justify-content 
+        flex-start(默认)
+        flex-end
+        center
+        space-around
+        space-between
+        space-evenly
+    align-items 每一行的对齐方式
+      strench
+      flex-start
+      flex-end
+      center
+      baseline
+        
+    align-content 注：当align-content在不折行的情况下是不生效的  整体
+        streth(默认)
+        flex-start
+        flex-end
+        center
+        space-around
+        space-between
+        space-evenly
+
+  flex子项目
+    order
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex
+    align-self
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+            align-items: center;
+            二选一
+            flex-wrap: wrap;
+            align-content: center;
+        } */
+        /* .box {
+            不适合多行文字
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            line-height: 200px;
+        } */
+        
+        .box {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .main div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        张敏666252626e2de2ed2ed2ed2e ddededededee285858558
+    </div>
+</body>
+
+</html>

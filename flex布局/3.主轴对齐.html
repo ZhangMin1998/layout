@@ -11,7 +11,15 @@
         space-between
         space-evenly
     align-items
+        
     align-content
+        streth(默认)
+        flex-start
+        flex-end
+        center
+        space-around
+        space-between
+        space-evenly
 
   flex子项目
     order
@@ -35,8 +43,7 @@
             height: 500px;
             background: skyblue;
             display: flex;
-            /* flex-wrap: wrap-reverse; */
-            flex-flow: column wrap;
+            justify-content: space-evenly;
         }
         
         .main div {
@@ -53,9 +60,9 @@
         <div>1</div>
         <div>2</div>
         <div>3</div>
-        <div>4</div>
+        <!-- <div>4</div>
         <div>5</div>
-        <div>6</div>
+        <div>6</div> -->
     </div>
 </body>
 

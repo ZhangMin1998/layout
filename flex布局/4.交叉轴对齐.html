@@ -10,8 +10,21 @@
         space-around
         space-between
         space-evenly
-    align-items
-    align-content
+    align-items 每一行的对齐方式
+      strench
+      flex-start
+      flex-end
+      center
+      baseline
+        
+    align-content 注：当align-content在不折行的情况下是不生效的  整体
+        streth(默认)
+        flex-start
+        flex-end
+        center
+        space-around
+        space-between
+        space-evenly
 
   flex子项目
     order
@@ -35,8 +48,11 @@
             height: 500px;
             background: skyblue;
             display: flex;
-            /* flex-wrap: wrap-reverse; */
-            flex-flow: column wrap;
+            flex-wrap: wrap;
+            /* 当align-content在不折行的情况下是不生效的 */
+            /* align-content: stretch; */
+            /* align-content: flex-start; 顶对齐 */
+            align-items: baseline;
         }
         
         .main div {
