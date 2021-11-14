@@ -1,0 +1,46 @@
+<!-- 
+    flex字项
+      order
+      flex-grow
+          默认值0，表示不占用剩余的空白间隙扩展自己的宽度
+      flex-shrink
+          默认值是1，表示flex容器空间不足时，元素的收缩比例
+      flex-basis
+      flex
+      align-self
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+        }
+        
+        .main div {
+            width: 600px;
+            height: 100px;
+            background: pink;
+            /* flex-shrink: 1;自动收缩，跟容器大小相同 */
+            /* flex-shrink: 0;不收缩 */
+            flex-shrink: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>1</div>
+        <!-- <div>2</div> -->
+    </div>
+</body>
+
+</html>

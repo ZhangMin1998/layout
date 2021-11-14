@@ -1,0 +1,49 @@
+<!-- 
+    flex字项
+      order
+          默认值0，改变某一个flex子项的排序位置
+      flex-grow
+          默认值0，表示不占用剩余的空白间隙扩展自己的宽度
+      flex-shrink
+          默认值是1，表示flex容器空间不足时，元素的收缩比例
+      flex-basis
+          默认值是auto,指定了flex元素在主轴方向上的初始大小
+      flex
+          flex属性是flex-grow,flex-shrink,flex-basis缩写
+      align-self
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background: skyblue;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .main div {
+            background: tomato;
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0%; */
+            /* flex: 0; */
+            flex: 1 0 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>测试文字</div>
+    </div>
+</body>
+
+</html>
