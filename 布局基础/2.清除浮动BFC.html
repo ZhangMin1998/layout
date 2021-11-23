@@ -1,0 +1,44 @@
+<!-- 
+  只要元素满足下面任一条件即可触发BFC特性：
+
+	body 根元素
+	浮动元素：float 除 none 以外的值
+	绝对定位元素：position (absolute、fixed)
+	display 为 inline-block、table-cells、flex
+	overflow 除了 visible 以外的值(hidden、auto、scroll)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            border: 1px solid black;
+            /* position: fixed;position的值为absolute或fixed */
+            /* float: left; 设置父元素float的值不为none*/
+            /* overflow: hidden;设置父元素overflow的值不为visible */
+            /* display: flex;display的值为inline-block、table-cell、table-caption、flex */
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    11111111
+</body>
+
+</html>
