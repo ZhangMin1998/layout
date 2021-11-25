@@ -1,0 +1,71 @@
+<!-- 
+  媒体类型：
+    all: 适用于所有设备
+    print：适用于在打印预览模式
+    screen：主要用于屏幕
+    speech：主要用于语音合成器
+
+  媒体特性：
+    width:viewport的宽度
+    height:viewport的高度
+    aspect-ratio:viewport的宽高比
+    orientation:viewport的旋转方向
+
+  逻辑操作符：
+    and not only ,
+
+  link标签方法
+    通过media属性设置媒体查询类型和媒体特性
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @media print {
+            .box {
+                font-size: 60px;
+            }
+        } */
+        /* @media (min-width:700px) {
+            .box {
+                width: 200px;
+                height: 200px;
+                background: pink;
+            }
+        } */
+        /* @media (orientation:portrait) { landscape:水平
+            .box {
+                width: 200px;
+                height: 200px;
+                background: pink;
+            }
+        } */
+        /* @media screen and (min-width:700px) and (max-width:1200px) {
+            .box {
+                width: 200px;
+                height: 200px;
+                background: pink;
+            }
+        } */
+        
+        @media not screen,
+        print and (min-width:700px) and (max-width:1200px) {
+            .box {
+                width: 200px;
+                height: 200px;
+                background: pink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">66666666666</div>
+</body>
+
+</html>
