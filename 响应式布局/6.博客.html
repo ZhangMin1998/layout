@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body {
+            background: #ebebeb;
+        }
+        
+        a {
+            color: #505050;
+        }
+        
+        .head {
+            height: 190px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .head-logo {
+            width: 200px;
+        }
+        
+        .nav {
+            border-top: 1px #ebebeb solid;
+            border-bottom: 2px #e1e1e1 solid;
+            background: white;
+            padding: 0 15px;
+        }
+        
+        .nav-bar {
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-bar i {
+            cursor: pointer;
+        }
+        
+        .nav-list {
+            display: none;
+        }
+        
+        .nav-list li {
+            height: 56px;
+            line-height: 56px;
+            position: relative;
+            padding: 0 21px;
+        }
+        
+        .nav-list li.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #e67e22;
+        }
+        
+        .nav-toggle {
+            display: none;
+        }
+        
+        .nav-toggle:checked+.nav-list {
+            display: block;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        
+        .row>[class*="col"] {
+            grid-area: auto/auto/auto/span 12;
+        }
+        
+        .row .col-1 {
+            grid-area: auto/auto/auto/span 1;
+        }
+        
+        .row .col-2 {
+            grid-area: auto/auto/auto/span 2;
+        }
+        
+        .row .col-3 {
+            grid-area: auto/auto/auto/span 3;
+        }
+        
+        .row .col-4 {
+            grid-area: auto/auto/auto/span 4;
+        }
+        
+        .row .col-5 {
+            grid-area: auto/auto/auto/span 5;
+        }
+        
+        .row .col-6 {
+            grid-area: auto/auto/auto/span 6;
+        }
+        
+        .row .col-7 {
+            grid-area: auto/auto/auto/span 7;
+        }
+        
+        .row .col-8 {
+            grid-area: auto/auto/auto/span 8;
+        }
+        
+        .row .col-9 {
+            grid-area: auto/auto/auto/span 9;
+        }
+        
+        .row .col-10 {
+            grid-area: auto/auto/auto/span 10;
+        }
+        
+        .row .col-11 {
+            grid-area: auto/auto/auto/span 11;
+        }
+        
+        .row .col-12 {
+            grid-area: auto/auto/auto/span 12;
+        }
+        
+        @media (min-width: 576px) {
+            .row .col-sm-1 {
+                grid-area: auto/auto/auto/span 1;
+            }
+            .row .col-sm-2 {
+                grid-area: auto/auto/auto/span 2;
+            }
+            .row .col-sm-3 {
+                grid-area: auto/auto/auto/span 3;
+            }
+            .row .col-sm-4 {
+                grid-area: auto/auto/auto/span 4;
+            }
+            .row .col-sm-5 {
+                grid-area: auto/auto/auto/span 5;
+            }
+            .row .col-sm-6 {
+                grid-area: auto/auto/auto/span 6;
+            }
+            .row .col-sm-7 {
+                grid-area: auto/auto/auto/span 7;
+            }
+            .row .col-sm-8 {
+                grid-area: auto/auto/auto/span 8;
+            }
+            .row .col-sm-9 {
+                grid-area: auto/auto/auto/span 9;
+            }
+            .row .col-sm-10 {
+                grid-area: auto/auto/auto/span 10;
+            }
+            .row .col-sm-11 {
+                grid-area: auto/auto/auto/span 11;
+            }
+            .row .col-sm-12 {
+                grid-area: auto/auto/auto/span 12;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .nav-bar {
+                display: none;
+            }
+            .nav-list {
+                display: flex !important;
+                justify-content: center;
+                justify-items: center;
+            }
+            .row .col-md-1 {
+                grid-area: auto/auto/auto/span 1;
+            }
+            .row .col-md-2 {
+                grid-area: auto/auto/auto/span 2;
+            }
+            .row .col-md-3 {
+                grid-area: auto/auto/auto/span 3;
+            }
+            .row .col-md-4 {
+                grid-area: auto/auto/auto/span 4;
+            }
+            .row .col-md-5 {
+                grid-area: auto/auto/auto/span 5;
+            }
+            .row .col-md-6 {
+                grid-area: auto/auto/auto/span 6;
+            }
+            .row .col-md-7 {
+                grid-area: auto/auto/auto/span 7;
+            }
+            .row .col-md-8 {
+                grid-area: auto/auto/auto/span 8;
+            }
+            .row .col-md-9 {
+                grid-area: auto/auto/auto/span 9;
+            }
+            .row .col-md-10 {
+                grid-area: auto/auto/auto/span 10;
+            }
+            .row .col-md-11 {
+                grid-area: auto/auto/auto/span 11;
+            }
+            .row .col-md-12 {
+                grid-area: auto/auto/auto/span 12;
+            }
+        }
+        
+        @media (min-width: 992px) {
+             :root {
+                --container: 940px;
+            }
+            .row>[class*="col"] {
+                padding: 0 15px;
+            }
+            .row .col-lg-1 {
+                grid-area: auto/auto/auto/span 1;
+            }
+            .row .col-lg-2 {
+                grid-area: auto/auto/auto/span 2;
+            }
+            .row .col-lg-3 {
+                grid-area: auto/auto/auto/span 3;
+            }
+            .row .col-lg-4 {
+                grid-area: auto/auto/auto/span 4;
+            }
+            .row .col-lg-5 {
+                grid-area: auto/auto/auto/span 5;
+            }
+            .row .col-lg-6 {
+                grid-area: auto/auto/auto/span 6;
+            }
+            .row .col-lg-7 {
+                grid-area: auto/auto/auto/span 7;
+            }
+            .row .col-lg-8 {
+                grid-area: auto/auto/auto/span 8;
+            }
+            .row .col-lg-9 {
+                grid-area: auto/auto/auto/span 9;
+            }
+            .row .col-lg-10 {
+                grid-area: auto/auto/auto/span 10;
+            }
+            .row .col-lg-11 {
+                grid-area: auto/auto/auto/span 11;
+            }
+            .row .col-lg-12 {
+                grid-area: auto/auto/auto/span 12;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+             :root {
+                --container: 1160px;
+            }
+            .row>[class*="col"] {
+                padding: 0 15px;
+            }
+            .row .col-xl-1 {
+                grid-area: auto/auto/auto/span 1;
+            }
+            .row .col-xl-2 {
+                grid-area: auto/auto/auto/span 2;
+            }
+            .row .col-xl-3 {
+                grid-area: auto/auto/auto/span 3;
+            }
+            .row .col-xl-4 {
+                grid-area: auto/auto/auto/span 4;
+            }
+            .row .col-xl-5 {
+                grid-area: auto/auto/auto/span 5;
+            }
+            .row .col-xl-6 {
+                grid-area: auto/auto/auto/span 6;
+            }
+            .row .col-xl-7 {
+                grid-area: auto/auto/auto/span 7;
+            }
+            .row .col-xl-8 {
+                grid-area: auto/auto/auto/span 8;
+            }
+            .row .col-xl-9 {
+                grid-area: auto/auto/auto/span 9;
+            }
+            .row .col-xl-10 {
+                grid-area: auto/auto/auto/span 10;
+            }
+            .row .col-xl-11 {
+                grid-area: auto/auto/auto/span 11;
+            }
+            .row .col-xl-12 {
+                grid-area: auto/auto/auto/span 12;
+            }
+        }
+        
+        @media (min-width: 1400px) {
+            .row .col-xxl-1 {
+                grid-area: auto/auto/auto/span 1;
+            }
+            .row .col-xxl-2 {
+                grid-area: auto/auto/auto/span 2;
+            }
+            .row .col-xxl-3 {
+                grid-area: auto/auto/auto/span 3;
+            }
+            .row .col-xxl-4 {
+                grid-area: auto/auto/auto/span 4;
+            }
+            .row .col-xxl-5 {
+                grid-area: auto/auto/auto/span 5;
+            }
+            .row .col-xxl-6 {
+                grid-area: auto/auto/auto/span 6;
+            }
+            .row .col-xxl-7 {
+                grid-area: auto/auto/auto/span 7;
+            }
+            .row .col-xxl-8 {
+                grid-area: auto/auto/auto/span 8;
+            }
+            .row .col-xxl-9 {
+                grid-area: auto/auto/auto/span 9;
+            }
+            .row .col-xxl-10 {
+                grid-area: auto/auto/auto/span 10;
+            }
+            .row .col-xxl-11 {
+                grid-area: auto/auto/auto/span 11;
+            }
+            .row .col-xxl-12 {
+                grid-area: auto/auto/auto/span 12;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <img class="head-logo" src="./img/ghost-logo.png" alt="">
+    </div>
+    <div class="nav">
+        <div class="nav-bar">
+            <label for="nav-toggle">
+              <i class="iconfont icon-zhedie"></i>
+            </label>
+        </div>
+        <input type="checkbox" name="" class="nav-toggle" id="nav-toggle">
+        <ul class="nav-list">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">论坛</a></li>
+            <li><a href="#">快捷手册</a></li>
+            <li><a href="#">中文文档</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
