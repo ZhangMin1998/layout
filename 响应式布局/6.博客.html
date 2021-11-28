@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/reset.css">
     <style>
+         :root {
+            --container: 100%;
+        }
+        
         body {
             background: #ebebeb;
         }
@@ -74,6 +78,159 @@
         
         .nav-toggle:checked+.nav-list {
             display: block;
+        }
+        
+        .main {
+            padding: 0 15px;
+            width: var(--container);
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .main-article {
+            margin-top: 35px;
+            background: white;
+            padding: 35px;
+            line-height: 1.5;
+        }
+        
+        .main-article h2 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .main-article div {
+            text-align: center;
+            line-height: 1.5;
+            color: #959595;
+        }
+        
+        .main-article p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 25px;
+        }
+        
+        .main-article button {
+            border: none;
+            background: #e67e22;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin: 30px 0;
+        }
+        
+        .main-article section {
+            border-top: 1px #ebebeb solid;
+            padding-top: 20px;
+        }
+        
+        .main-article section i {
+            margin-right: 10px;
+        }
+        
+        .main-aside {
+            background: white;
+            padding: 35px;
+            margin-top: 35px;
+        }
+        
+        .main-aside h3 {
+            font-style: 20px;
+            font-weight: 400;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+        }
+        
+        .main-aside h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 90px;
+            height: 1px;
+            background: #e67e22;
+        }
+        
+        .main-aside p {
+            margin-top: 30px;
+        }
+        
+        .main-aside button {
+            border: none;
+            background: #e67e22;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin: 30px 0;
+            width: 100%;
+        }
+        
+        .main-aside div {
+            margin-top: 20px;
+        }
+        
+        .main-aside div a {
+            border: 1px solid #ebebeb;
+            display: inline-block;
+            margin: 11px 7px 0 0;
+            padding: 5px 10px;
+        }
+        
+        .foot {
+            background: #202020;
+            margin-top: 35px;
+            padding: 35px;
+            overflow: hidden;
+        }
+        
+        .foot-wrapper {
+            width: var(--container);
+            margin: 0 auto;
+        }
+        
+        .foot-item {
+            padding: 0 30px;
+            margin-bottom: 30px;
+        }
+        
+        .foot-item h3 {
+            color: white;
+            font-style: 22px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+        }
+        
+        .foot-item h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 90px;
+            height: 1px;
+            background: #e67e22;
+        }
+        
+        .foot-item div {
+            margin-top: 20px;
+        }
+        
+        .foot-item div a {
+            margin: 10px;
+            display: inline-block;
+            color: #959595;
+        }
+        
+        .copyright {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            color: #555;
         }
         
         .row {
@@ -354,6 +511,7 @@
     <div class="head">
         <img class="head-logo" src="./img/ghost-logo.png" alt="">
     </div>
+
     <div class="nav">
         <div class="nav-bar">
             <label for="nav-toggle">
@@ -369,6 +527,142 @@
             <li><a href="#">关于</a></li>
         </ul>
     </div>
+
+    <div class="main row">
+        <div class="col-lg-8">
+            <div class="main-article">
+                <h2>全新的Ghost文档上线</h2>
+                <div>
+                    <span>作者：王赛</span> • <span>2018年11月20日</span>
+                </div>
+                <p>
+                    我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+                </p>
+                <button>阅读全文</button>
+                <section>
+                    <i class="iconfont icon-wenjianjia"></i>
+                    <a href="#">Android</a>，
+                    <a href="#">客户端</a>
+                </section>
+            </div>
+            <div class="main-article">
+                <h2>全新的Ghost文档上线</h2>
+                <div>
+                    <span>作者：王赛</span> • <span>2018年11月20日</span>
+                </div>
+                <p>
+                    我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+                </p>
+                <button>阅读全文</button>
+                <section>
+                    <i class="iconfont icon-wenjianjia"></i>
+                    <a href="#">Android</a>，
+                    <a href="#">客户端</a>
+                </section>
+            </div>
+            <div class="main-article">
+                <h2>全新的Ghost文档上线</h2>
+                <div>
+                    <span>作者：王赛</span> • <span>2018年11月20日</span>
+                </div>
+                <p>
+                    我们的整个 Ghost 文档 已经全新改版了！并且添加了一些新的补充，包括使用教程和功能集成。 新文档的目标是帮助更多人有效地安装并管理他们发布的内容，并且最大限度地发挥 Ghost 作为一个开源发布平台的灵活性。文档的设计和结构已经修订完毕，我们的改进包括 Ghost 安装和设
+                </p>
+                <button>阅读全文</button>
+                <section>
+                    <i class="iconfont icon-wenjianjia"></i>
+                    <a href="#">Android</a>，
+                    <a href="#">客户端</a>
+                </section>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="main-aside">
+                <h3>声明</h3>
+                <p>Ghost 中文版不再继续维护，请去官方下载。</p>
+            </div>
+            <div class="main-aside">
+                <h3>下载</h3>
+                <button>Ghost最新版</button>
+            </div>
+            <div class="main-aside">
+                <h3>标签云</h3>
+                <div>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="foot-wrapper row">
+            <div class="foot-item col-lg-4">
+                <h3>友链</h3>
+                <div>
+                    <a href="#">Bootstrap中文网</a>
+                    <a href="#">React</a>
+                    <a href="#">Vue.js</a>
+                    <a href="#">Svelte</a>
+                    <a href="#">Preact</a>
+                    <a href="#">Babel</a>
+                    <a href="#">Webpack</a>
+                    <a href="#">Rollup.js</a>
+                    <a href="#">Bootstrap中文网</a>
+                    <a href="#">React</a>
+                    <a href="#">Vue.js</a>
+                    <a href="#">Svelte</a>
+                    <a href="#">Preact</a>
+                    <a href="#">Babel</a>
+                    <a href="#">Webpack</a>
+                    <a href="#">Rollup.js</a>
+                </div>
+            </div>
+            <div class="foot-item col-lg-4">
+                <h3>标签云</h3>
+                <div>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                </div>
+            </div>
+            <div class="foot-item col-lg-4">
+                <h3>合作伙伴</h3>
+                <div>
+                    <a href="#">腾讯</a>
+                    <a href="#">阿里巴巴</a>
+                    <a href="#">百度</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ghost中文网 | 京ICP备11008151号-11 | 京公网安备11010802014853</p>
+    </div>
+
 </body>
 
 </html>
